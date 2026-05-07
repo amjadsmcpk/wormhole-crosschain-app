@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cross-Chain Staking</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <div class="topbar">
+        <div>
+          <p class="eyebrow">Wormhole DeFi</p>
+          <h1>Cross-Chain Staking</h1>
+        </div>
+        <span id="connectionStatus" class="status-pill offline">SSE Offline</span>
+      </div>
+
+      <p class="subtitle">
+        Stake SOL across chains and watch every backend step in real time.
+      </p>
+
+      <div class="form-group">
+        <label for="amount">Staking amount</label>
+        <div class="amount-box">
+          <input type="number" id="amount" step="0.001" min="0.001" value="0.01" />
+          <span>SOL</span>
+        </div>
+      </div>
+
+      <button id="stakeButton">Execute Cross-Chain Stake</button>
+
+      <div id="statusMessage" class="status info">
+        Ready to start cross-chain staking.
+      </div>
+    </section>
+
+    <section class="card logs-card">
+      <div class="logs-header">
+        <div>
+          <p class="eyebrow">Live Backend Stream</p>
+          <h2>Transaction Logs</h2>
+        </div>
+        <button id="clearLogsButton" class="ghost-button">Clear</button>
+      </div>
+
+      <div id="logOutput" class="log-output"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
